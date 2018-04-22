@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+//import '../functionalities/Plant.dart';
+import 'NewPlantScreen.dart';
+import 'CalendarScreen.dart';
+import 'AllPlantsScreen.dart';
 
 class Home extends StatelessWidget{
   @override
@@ -19,7 +23,13 @@ class Home extends StatelessWidget{
       ),
       backgroundColor: Colors.lightGreen,
       floatingActionButton: new FloatingActionButton(
-        onPressed: () => debugPrint("pressedd"),
+        //onPressed: () => PlantCreate("Monsterka","Monstera", new DateTime.now(), "big leafs", "medium", 2),
+        onPressed: (){
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new NewPlantScreen()),
+          );
+      },
         backgroundColor: Colors.green.shade600,
         tooltip: "Check what you can add",
         child: new Icon(Icons.add_circle,color: Colors.white,),
@@ -57,7 +67,31 @@ class Home extends StatelessWidget{
         new BottomNavigationBarItem(icon: new Icon(Icons.cake), title: new Text("Sprawdz kalendarz")),
         new BottomNavigationBarItem(icon: new Icon(Icons.exit_to_app), title: new Text("idź do roślin")),
       ],
-        fixedColor: Colors.lightGreen.shade500,),
+        fixedColor: Colors.lightGreen.shade500,
+      onTap: (int) {
+        if(int == 0){
+        Navigator.push(
+        context,
+        new MaterialPageRoute(builder: (context) => new NewPlantScreen()),
+        );
+        }
+        else if(int == 1){
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new CalendarScreen()),
+          );
+        }
+        else if(int == 2){
+          Navigator.push(
+            context,
+            new MaterialPageRoute(builder: (context) => new AllPlantsScreen()),
+          );
+        }
+        else null;
+        },
+
+
+        ),
     );
   }
 

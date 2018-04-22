@@ -32,7 +32,9 @@ class Plant{
   }
 
   Plant(this._name, this._plantDate, this._family, this._insolation,
-      this.wateringFrequency);
+      this.wateringFrequency){
+    print(toString());
+  }
 
   @override
   String toString() {
@@ -40,4 +42,9 @@ class Plant{
   }
 
 
+
+}
+
+void PlantCreate(String alias, String name, DateTime plantDate, String family, String insolation, int wateringFrequency){
+  Plant alias = new Plant(name, plantDate, family, insolation, wateringFrequency);
 }

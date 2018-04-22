@@ -9,6 +9,8 @@ class AllPlantsScreen extends StatelessWidget{
         title: new Text("My plants",softWrap: true, maxLines: 2, textDirection: TextDirection.rtl,),
       ),
       backgroundColor: Colors.lightGreen,
+
+      // to add calendar app
     );
   }
 

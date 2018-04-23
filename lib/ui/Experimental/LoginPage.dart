@@ -20,8 +20,11 @@ class LoginState extends State<Login>{
       ),
       backgroundColor: Colors.lightGreen,
       body: new Container(
+        padding: const EdgeInsets.only(left: 25.0),
+        margin: const EdgeInsets.only(left: 25.0),
         alignment: Alignment.topCenter,
         child: new Column(
+
           children: <Widget>[
             new Image.asset(
               'images/loginPerson.png',

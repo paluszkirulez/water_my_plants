@@ -9,3 +9,7 @@ build/
 ios/.generated/
 packages
 .flutter-plugins
+*.jpg
+*.jpeg
+*.png
+*.gif

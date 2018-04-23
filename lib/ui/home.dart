@@ -5,6 +5,7 @@ import '../functionalities/Plant.dart';
 //import 'CalendarScreen.dart';
 //import 'AllPlantsScreen.dart';
 import 'MainDrawer.dart';
+import 'Experimental/LoginPage.dart';
 
 class Home extends StatelessWidget{
   @override
@@ -15,8 +16,14 @@ class Home extends StatelessWidget{
         title: new Text("ZaroSla - water my plants",softWrap: true, maxLines: 2, textDirection: TextDirection.rtl,),
         actions: <Widget>[
           new IconButton(
-              icon: new Icon(Icons.print),
-              onPressed: () => debugPrint("Icone tapped")),
+              icon: new Icon(Icons.person),
+              //onPressed: () => debugPrint("Icone tapped")),
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(builder: (context) => new Login()),
+                );
+              }),
           new IconButton(
               icon: new Icon(Icons.notifications_none),
               onPressed: () => debugPrint("Second tap"))

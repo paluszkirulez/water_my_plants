@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../functionalities/Plant.dart';
 
 /*class NewPlantScreen extends StatelessWidget{
   @override
@@ -21,13 +22,46 @@ class NewPlantScreen extends StatefulWidget {
 
 }
 
+/*final TextEditingController _plantName = new TextEditingController();
+final TextEditingController _plantFamily = new TextEditingController();
+final TextEditingController _plantInsolation = new TextEditingController();
+final TextEditingController _plantWatering = new TextEditingController();
+final TextEditingController _plantDate = new TextEditingController();
+
+List<TextEditingController> _plantInfo = [_plantName,_plantFamily,_plantInsolation,_plantWatering,_pantDate];
+void _erase() {
+  setState(() {
+    _plantInfo.forEach((element)=>element.clear());
+  }
+  );
+}*/
+
 final TextEditingController _plantName = new TextEditingController();
 final TextEditingController _plantFamily = new TextEditingController();
 final TextEditingController _plantInsolation = new TextEditingController();
 final TextEditingController _plantWatering = new TextEditingController();
 final TextEditingController _plantDate = new TextEditingController();
 
+
 class PlantScreen extends State<NewPlantScreen> {
+
+
+  List<TextEditingController> _plantInfo = [_plantName,_plantFamily,_plantInsolation,_plantWatering,_plantDate];
+  void _erase() {
+    setState(() {
+      _plantInfo.forEach((element)=>element.clear());
+      //debugPrint("cleared");
+    }
+    );
+  }
+  Plant myNewPlant;
+  Plant _create(){
+    debugPrint(_plantWatering.text.toString());
+    Plant myNewPlant = new Plant(_plantName.text.toString(),_plantDate.text.toString(),_plantFamily.text.toString(),_plantInsolation.text.toString(),int.parse(_plantWatering.text.toString()));
+    debugPrint(myNewPlant.toString());
+    return myNewPlant;
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -115,7 +149,7 @@ class PlantScreen extends State<NewPlantScreen> {
                               new Container(
                                 margin: const EdgeInsets.only(left:10.0),
                                 child: new RaisedButton(
-                                    onPressed: ()=>debugPrint("pressed"),
+                                    onPressed: ()=>_create(),
                                     color: Colors.green,
                                     child: new Text("Add plant",
                                                   style: new TextStyle(color: Colors.white, fontSize: 16.9
@@ -126,7 +160,7 @@ class PlantScreen extends State<NewPlantScreen> {
                               new Container(
                                   margin: const EdgeInsets.only(left:90.0),
                                   child: new RaisedButton(
-                                      onPressed: ()=>debugPrint("clear"),
+                                      onPressed: ()=>_erase(),
                                       color: Colors.green.shade500,
                                       child: new Text("Clear",
                                           style: new TextStyle(color: Colors.white, fontSize: 16.9

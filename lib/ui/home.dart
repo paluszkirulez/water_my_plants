@@ -32,7 +32,7 @@ class Home extends StatelessWidget{
       ),
       backgroundColor: Colors.lightGreen,
       floatingActionButton: new FloatingActionButton(
-        onPressed: () => PlantCreate("Monsterka","Monstera", new DateTime.now(), "big leafs", "medium", 2),
+        onPressed: () => PlantCreate("Monsterka","Monstera", new DateTime.now().toString(), "big leafs", "medium", 2),
 
         backgroundColor: Colors.green.shade600,
         tooltip: "Check what you can add",

@@ -2,7 +2,7 @@
 
 class Plant{
   String _name;
-  DateTime _plantDate;
+  String _plantDate;
   String _family;
   String _insolation;
   int wateringFrequency;
@@ -13,7 +13,7 @@ class Plant{
     _name = value;
   }
 
-  DateTime get plantDate => _plantDate;
+  String get plantDate => _plantDate;
 
   String get insolation => _insolation;
 
@@ -27,13 +27,13 @@ class Plant{
     _family = value;
   }
 
-  set plantDate(DateTime value) {
+  set plantDate(String value) {
     _plantDate = value;
   }
 
   Plant(this._name, this._plantDate, this._family, this._insolation,
       this.wateringFrequency){
-    print(toString());
+   // print(toString());
   }
 
   @override
@@ -45,6 +45,6 @@ class Plant{
 
 }
 
-void PlantCreate(String alias, String name, DateTime plantDate, String family, String insolation, int wateringFrequency){
+void PlantCreate(String alias, String name, String plantDate, String family, String insolation, int wateringFrequency){
   Plant alias = new Plant(name, plantDate, family, insolation, wateringFrequency);
 }

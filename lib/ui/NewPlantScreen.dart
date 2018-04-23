@@ -22,6 +22,10 @@ class NewPlantScreen extends StatefulWidget {
 }
 
 final TextEditingController _plantName = new TextEditingController();
+final TextEditingController _plantFamily = new TextEditingController();
+final TextEditingController _plantInsolation = new TextEditingController();
+final TextEditingController _plantWatering = new TextEditingController();
+final TextEditingController _plantDate = new TextEditingController();
 
 class PlantScreen extends State<NewPlantScreen> {
   @override
@@ -38,6 +42,7 @@ class PlantScreen extends State<NewPlantScreen> {
             alignment: Alignment.topCenter,
             child: new Column(
                 children: <Widget>[
+                  new Padding(padding: const EdgeInsets.all(15.0)),
                   new Image.asset(
                     'images/plant.png',
                     width: 90.0,
@@ -50,7 +55,7 @@ class PlantScreen extends State<NewPlantScreen> {
                       color: Colors.lightGreen.shade200,
                       child: new Column(
                         children: <Widget>[
-                          //new Padding(padding: const EdgeInsets.all(15.0)),
+                          new Padding(padding: const EdgeInsets.all(5.0)),
                           new TextField(
                             controller: _plantName,
                             decoration: new InputDecoration(
@@ -60,7 +65,7 @@ class PlantScreen extends State<NewPlantScreen> {
                                   width: 30.0,
                                   height: 30.0,
                                   color: Colors.green,
-                                  alignment: Alignment.centerRight,
+                                  alignment: Alignment.centerLeft,
                                   //centerSlice: Rect.fromLTRB(10.0, 10.0, 10.0, 10.0),
                                 ),
                             isDense: false,
@@ -68,7 +73,7 @@ class PlantScreen extends State<NewPlantScreen> {
                           ),
                           new Padding(padding: const EdgeInsets.all(10.0)),
                           new TextField(
-                            controller: _plantName,
+                            controller: _plantDate,
                             decoration: new InputDecoration(
                               hintText: 'Planted - date',
                               prefixIcon: new Icon(Icons.calendar_today, color: Colors.green),
@@ -77,7 +82,7 @@ class PlantScreen extends State<NewPlantScreen> {
                           ),
                           new Padding(padding: const EdgeInsets.all(10.0)),
                           new TextField(
-                            controller: _plantName,
+                            controller: _plantFamily,
                             decoration: new InputDecoration(
                               hintText: 'Plant family',
                               prefixIcon: new Icon(Icons.people, color: Colors.green),
@@ -86,26 +91,19 @@ class PlantScreen extends State<NewPlantScreen> {
                           ),
                           new Padding(padding: const EdgeInsets.all(10.0)),
                           new TextField(
-                            controller: _plantName,
+                            controller: _plantInsolation,
                             decoration: new InputDecoration(
                               hintText: 'Insolation',
-                              prefixIcon: new Icon(Icons.invert_colors, color: Colors.green),
+                              prefixIcon: new Icon(Icons.wb_sunny, color: Colors.green),
                               isDense: false,
                             ),
                           ),
                           new Padding(padding: const EdgeInsets.all(10.0)),
                           new TextField(
-                            controller: _plantName,
+                            controller: _plantWatering,
                             decoration: new InputDecoration(
                               hintText: 'How often should be watered? Give number of days',
-                              prefixIcon: new Image.asset(
-                                'images/plant.png',
-                                width: 30.0,
-                                height: 30.0,
-                                color: Colors.green,
-                                alignment: Alignment.centerRight,
-                                //centerSlice: Rect.fromLTRB(10.0, 10.0, 10.0, 10.0),
-                              ),
+                              prefixIcon: new Icon(Icons.invert_colors, color: Colors.green),
                               isDense: false,
                             ),
                           ),
@@ -115,7 +113,7 @@ class PlantScreen extends State<NewPlantScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               new Container(
-                                margin: const EdgeInsets.only(left:20.0),
+                                margin: const EdgeInsets.only(left:10.0),
                                 child: new RaisedButton(
                                     onPressed: ()=>debugPrint("pressed"),
                                     color: Colors.green,
@@ -126,7 +124,7 @@ class PlantScreen extends State<NewPlantScreen> {
                                 )
                               ),
                               new Container(
-                                  margin: const EdgeInsets.only(left:110.0),
+                                  margin: const EdgeInsets.only(left:90.0),
                                   child: new RaisedButton(
                                       onPressed: ()=>debugPrint("clear"),
                                       color: Colors.green.shade500,

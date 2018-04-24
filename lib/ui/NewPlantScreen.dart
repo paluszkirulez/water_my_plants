@@ -87,9 +87,10 @@ class PlantScreen extends State<NewPlantScreen> {
                   ),
                   new Padding(padding: const EdgeInsets.all(15.0)),
                   new Container (
-                      margin: EdgeInsets.all(15.0),
+                      margin: EdgeInsets.all(5.0),
                       height: 400.0,
                       color: Colors.lightGreen.shade200,
+
                       child: new Column(
                         children: <Widget>[
                           new Padding(padding: const EdgeInsets.all(5.0)),
@@ -140,9 +141,12 @@ class PlantScreen extends State<NewPlantScreen> {
                             controller: _plantWatering,
                             decoration: new InputDecoration(
                               hintText: 'How often should be watered? Give number of days',
+
                               prefixIcon: new Icon(Icons.invert_colors, color: Colors.green),
                               isDense: false,
+
                             ),
+                            keyboardType: TextInputType.numberWithOptions(signed: false, decimal: false),
                           ),
                           new Padding(padding: const EdgeInsets.all(10.0)),
                           new Padding(padding: const EdgeInsets.all(15.0)),

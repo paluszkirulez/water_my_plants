@@ -87,6 +87,7 @@ class PlantScreen extends State<NewPlantScreen> {
                   ),
                   new Padding(padding: const EdgeInsets.all(15.0)),
                   new Container (
+                      margin: EdgeInsets.all(15.0),
                       height: 400.0,
                       color: Colors.lightGreen.shade200,
                       child: new Column(
@@ -156,7 +157,8 @@ class PlantScreen extends State<NewPlantScreen> {
                                     child: new Text("Add plant",
                                                   style: new TextStyle(color: Colors.white, fontSize: 16.9
                                                     )
-                                    )
+                                    ),
+                                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(32.0))
                                 )
                               ),
                               new Container(
@@ -167,7 +169,8 @@ class PlantScreen extends State<NewPlantScreen> {
                                       child: new Text("Clear",
                                           style: new TextStyle(color: Colors.white, fontSize: 16.9
                                           )
-                                      )
+                                      ),
+                                      shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(32.0))
                                   )
                               )
                             ],

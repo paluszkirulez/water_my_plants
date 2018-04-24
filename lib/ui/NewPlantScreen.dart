@@ -56,10 +56,12 @@ class PlantScreen extends State<NewPlantScreen> {
   }
   Plant myNewPlant;
   Plant _create(){
-    debugPrint(_plantWatering.text.toString());
+    //debugPrint(_plantWatering.text.toString());
     Plant myNewPlant = new Plant(_plantName.text.toString(),_plantDate.text.toString(),_plantFamily.text.toString(),_plantInsolation.text.toString(),int.parse(_plantWatering.text.toString()));
     debugPrint(myNewPlant.toString());
+    _erase();
     return myNewPlant;
+
   }
 
   @override
@@ -74,7 +76,7 @@ class PlantScreen extends State<NewPlantScreen> {
         backgroundColor: Colors.lightGreen,
         body: new Container(
             alignment: Alignment.topCenter,
-            child: new Column(
+            child: new ListView(
                 children: <Widget>[
                   new Padding(padding: const EdgeInsets.all(15.0)),
                   new Image.asset(
@@ -84,7 +86,7 @@ class PlantScreen extends State<NewPlantScreen> {
                     color: Colors.green,
                   ),
                   new Padding(padding: const EdgeInsets.all(15.0)),
-                  new Container(
+                  new Container (
                       height: 400.0,
                       color: Colors.lightGreen.shade200,
                       child: new Column(
@@ -171,15 +173,21 @@ class PlantScreen extends State<NewPlantScreen> {
                             ],
                           )
                         ],
-                      )
+                      ),
+
 
                   ),
                   new Padding(padding: const EdgeInsets.all(15.0)),
 
                 ]
+
+
             )
 
-        )
+        ),
+        // for container -
+        //resizeToAvoidBottomPadding: false,
+
     )
     ;
   }

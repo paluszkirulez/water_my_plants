@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'AllPlantsScreen.dart';
 import 'CalendarScreen.dart';
 import 'NewPlantScreen.dart';
-
+// TODO change t beautiful list, not some gibberish
 class MyBottomList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

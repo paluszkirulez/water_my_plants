@@ -36,7 +36,7 @@ class PlantScreen extends State<NewPlantScreen> {
     debugPrint(myNewPlant.toString());
     _erase();
     return myNewPlant;
-    Scaffold.of
+
 
   }
 
@@ -53,7 +53,7 @@ class PlantScreen extends State<NewPlantScreen> {
         body:new Stack(
             fit: StackFit.expand,
             children: <Widget>[
-              new Image.asset('images/monster_wallpaper.jpg',
+              new Image.asset('images/new_plant.jpg',
                   fit: BoxFit.cover, alignment: new AlignmentDirectional(0.2, 0.0)),
               new Container(
                 decoration: new BoxDecoration(

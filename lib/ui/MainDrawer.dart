@@ -10,7 +10,7 @@ class MainDrawer extends StatelessWidget{
             title: new Text("Zarosla menu")
 
         ),
-        backgroundColor: Colors.lightGreen.shade400,
+        backgroundColor: new Color.fromRGBO(255, 255, 255 , 0.5),
         //body: new Text("my text", textDirection: TextDirection.ltr,),
         body: new ListView(
           children: <Widget>[

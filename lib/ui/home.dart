@@ -31,6 +31,38 @@ class Home extends StatelessWidget{
         ],
       ),
       backgroundColor: Colors.lightGreen,
+        body:
+        new Stack(
+            fit: StackFit.expand,
+            children: <Widget>[
+              new Image.asset('images/monster_wallpaper.jpg',
+                  fit: BoxFit.cover, alignment: new AlignmentDirectional(0.2, 0.0)),
+              new Container(
+                decoration: new BoxDecoration(
+                    gradient: new LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          const Color(0x00FFFFFF),
+                          const Color(0x00FFFFFF),
+                          const Color(0xBBFFFFFF),
+                          const Color(0xBBFFFFFF),
+                          const Color(0xBBFFFFFF)
+                        ],
+                        stops: [
+                          0.0,0.30,0.7, 0.75,0.8
+                        ]
+                    )
+
+                ),
+              ),
+
+            ]
+
+        )
+      ,
+      drawer: new MainDrawer(),
+      bottomNavigationBar: new MyBottomList(),
       floatingActionButton: new FloatingActionButton(
         onPressed: () => PlantCreate("Monsterka","Monstera", new DateTime.now().toString(), "big leafs", "medium", 2),
 
@@ -38,8 +70,6 @@ class Home extends StatelessWidget{
         tooltip: "Check what you can add",
         child: new Icon(Icons.add_circle,color: Colors.white,),
       ),
-      drawer: new MainDrawer(),
-      bottomNavigationBar: new MyBottomList(),
     );
   }
 

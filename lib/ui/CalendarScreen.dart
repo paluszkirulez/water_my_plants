@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:small_calendar/small_calendar.dart';
+//import 'package:small_calendar/small_calendar.dart';
 
 class CalendarScreen extends StatelessWidget{
   @override
@@ -10,6 +10,37 @@ class CalendarScreen extends StatelessWidget{
         title: new Text("Plants callendar",softWrap: true, maxLines: 2, textDirection: TextDirection.rtl,),
       ),
       backgroundColor: Colors.lightGreen,
+      body:
+          new Stack(
+            fit: StackFit.expand,
+              children: <Widget>[
+                  new Image.asset('images/monster_wallpaper.jpg',
+                                fit: BoxFit.cover, alignment: new AlignmentDirectional(0.2, 0.0)),
+                  new Container(
+                    decoration: new BoxDecoration(
+                            gradient: new LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              const Color(0x00FFFFFF),
+                              const Color(0x00FFFFFF),
+                              const Color(0xBBFFFFFF),
+                              const Color(0xBBFFFFFF),
+                              const Color(0xBBFFFFFF)
+                            ],
+                            stops: [
+                              0.0,0.30,0.7, 0.75,0.8
+                            ]
+                        )
+
+                    ),
+                  ),
+
+              ]
+
+          )
+
+
     );
   }
 

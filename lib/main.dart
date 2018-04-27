@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './ui/Home.dart';
-import './functionalities/Json parse.dart';
+import './functionalities/JsonParse.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
   printJson;
   runApp(new MaterialApp(
     title: "Scaffold",

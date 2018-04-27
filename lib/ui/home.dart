@@ -6,8 +6,9 @@ import '../functionalities/Plant.dart';
 //import 'AllPlantsScreen.dart';
 import 'MainDrawer.dart';
 import 'Experimental/LoginPage.dart';
+import '../functionalities/JsonParse.dart';
 
-class Home extends StatelessWidget{
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -26,7 +27,7 @@ class Home extends StatelessWidget{
               }),
           new IconButton(
               icon: new Icon(Icons.notifications_none),
-              onPressed: () => debugPrint("Second tap"))
+              onPressed: () => printJson())
 
         ],
       ),
